@@ -1,0 +1,14 @@
+{
+    "username" : "username",
+    "password" : "password",
+    "severPort" : 8000,
+    "esURL" : ["http://localhost:9200"],
+    "as" : {
+        "host" : "127.0.0.1",
+        "port" : 3000,
+        "namespace" : "prefix",
+        "retention" : 86400
+    },
+    "appLog" : "app.log",
+    "serverLog" : "server.log"
+}
