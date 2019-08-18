@@ -31,7 +31,12 @@ LastUpdated   -   Long      // UTC timestamp of last modification
 ```
 
 ## Documentation
-More detailed documentation is present [here](https://github.com/jenu9417/QCaller/tree/master/external/documentation).
+For complete list of documentation, visit [here](https://github.com/jenu9417/QCaller/tree/master/external/documentation)
+
+- API Documentaion - [here](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md)
+- Assumptions, Concerns and More - [here](https://github.com/jenu9417/QCaller/blob/master/external/documentation/Assumptions.md)
+- Improvements & Future Scope - [here](https://github.com/jenu9417/QCaller/blob/master/external/documentation/Improvements.md)
+
 ## APIs
 - > [<code>GET</code> /contact](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#get-contact)
 - > [<code>POST</code> /contact](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#create-contact)
