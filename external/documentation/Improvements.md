@@ -1,7 +1,6 @@
 # QCaller
 
 ## Improvements & Future Scope
-------------------------------
 
 QCaller is in v1 stage and has a vast improvement potential. It has been designed with potential to accomodate this.
 
