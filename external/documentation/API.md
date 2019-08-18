@@ -56,7 +56,7 @@ GET    /contact?number=<number>&country=<country>&immediate=<true|false>&size=<s
 | `number` | `string` | **Required**. |
 | `country` | `string` | **Required**. |
 | `immediate` | `string` | **Optional**.  Set the param to true to enable fast lookup. Default false. |
-| `size` | `int` | **Optional**.  Numbervof contacts to return. Defaults to 5. No significance if `immediate` is set to true |
+| `size` | `int` | **Optional**.  Number of contacts to return. Defaults to 5. No significance if `immediate` is set to true |
 
 
 ## Update Contact
@@ -89,9 +89,9 @@ DELETE    /contact?sourceID=<sourceid>&number=<number>&country=<country>
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| `sourceID` | `string` | **Required**. sourceID |
-| `number` | `string` | **Required**. number |
-| `country` | `string` | **Required**. country |
+| `sourceID` | `string` | **Required**. |
+| `number` | `string` | **Required**. |
+| `country` | `string` | **Required**. |
 
 
 ## Bulk Create Contact
