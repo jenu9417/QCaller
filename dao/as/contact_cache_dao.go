@@ -51,6 +51,10 @@ func (c *ContactCacheDao) GetContact(number string, country string) (*model.Cont
 		return nil, err
 	}
 
+	if record == nil {
+		return nil, nil
+	}
+
 	return convertToContact(record.Bins)
 }
 
