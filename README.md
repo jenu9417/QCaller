@@ -1,9 +1,7 @@
 # QCaller
 The simplfied truecaller
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+![](https://github.com/jenu9417/QCaller/blob/master/external/others/pics/QCaller.png)
 
 
 ## Features
@@ -33,15 +31,15 @@ LastUpdated   -   Long      // UTC timestamp of last modification
 ```
 
 ## Documentation
-More detailed documentation is present here.
+More detailed documentation is present [here](https://github.com/jenu9417/QCaller/tree/master/external/documentation).
 ## APIs
-- > [<code>GET</code> /contact](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
-- > [<code>POST</code> /contact](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
-- > [<code>PUT</code> /contact](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
-- > [<code>DELETE</code> /contact](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
-- > [<code>POST</code> /contact/bulk](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
-- > [<code>PUT</code> /contact/bulk](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
-- > [<code>GET</code> /contact/search](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md)
+- > [<code>GET</code> /contact](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#get-contact)
+- > [<code>POST</code> /contact](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#create-contact)
+- > [<code>PUT</code> /contact](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#update-contact)
+- > [<code>DELETE</code> /contact](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#delete-contact)
+- > [<code>POST</code> /contact/bulk](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#bulk-create-contact)
+- > [<code>PUT</code> /contact/bulk](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#bulk-update-contact)
+- > [<code>GET</code> /contact/search](https://github.com/jenu9417/QCaller/blob/master/external/documentation/API.md#search-contact)
 
 ## How to use?
 Run the make file to create package
