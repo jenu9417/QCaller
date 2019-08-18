@@ -1,5 +1,5 @@
 #! /bin/bash
 
-cd ../../as/AS_HOME
+cd ../../tools/as/AS_HOME
 
-bin/aerospike stop
+sudo bin/aerospike stop

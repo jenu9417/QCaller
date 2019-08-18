@@ -10,6 +10,7 @@ build: ## Get required lib and build
 	## Create folder structure
 	mkdir -p $(CURDIR)/target/QCaller/bin
 	mkdir -p $(CURDIR)/target/QCaller/scripts
+	mkdir -p $(CURDIR)/target/QCaller/tools
 	
 	## Compile and build QCaller go binary
 	go clean
@@ -27,8 +28,8 @@ build: ## Get required lib and build
 
 deps:
 	## Copy external files to target
-	cp -R $(CURDIR)/external/as $(CURDIR)/target/QCaller
-	cp -R $(CURDIR)/external/es $(CURDIR)/target/QCaller
+	cp -R $(CURDIR)/external/tools/as $(CURDIR)/target/QCaller/tools
+	cp -R $(CURDIR)/external/tools/es $(CURDIR)/target/QCaller/tools
 	cp -R $(CURDIR)/external/scripts/as $(CURDIR)/target/QCaller/scripts
 	cp -R $(CURDIR)/external/scripts/es $(CURDIR)/target/QCaller/scripts
 
