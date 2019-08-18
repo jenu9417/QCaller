@@ -9,6 +9,7 @@ build: ## Get required lib and build
 
 	## Create folder structure
 	mkdir -p $(CURDIR)/target/QCaller/bin
+	mkdir -p $(CURDIR)/target/QCaller/scripts
 	
 	## Compile and build QCaller go binary
 	go clean
@@ -19,14 +20,17 @@ build: ## Get required lib and build
 	cp $(CURDIR)/config.json $(CURDIR)/target/QCaller/bin
 
 	cp -R $(CURDIR)/external/postman $(CURDIR)/target/QCaller
-	cp -R $(CURDIR)/external/scripts $(CURDIR)/target/QCaller
+	cp -R $(CURDIR)/external/scripts/Server.sh $(CURDIR)/target/QCaller/scripts
 	
 	## Copy README
 	cp $(CURDIR)/README.md $(CURDIR)/target/QCaller
 
 deps:
 	## Copy external files to target
+	cp -R $(CURDIR)/external/as $(CURDIR)/target/QCaller
 	cp -R $(CURDIR)/external/es $(CURDIR)/target/QCaller
+	cp -R $(CURDIR)/external/scripts/as $(CURDIR)/target/QCaller/scripts
+	cp -R $(CURDIR)/external/scripts/es $(CURDIR)/target/QCaller/scripts
 
 tar:
 	cd $(CURDIR)/target; tar -czvf ./QCaller.tar.gz *
