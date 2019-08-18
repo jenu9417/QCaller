@@ -31,9 +31,12 @@ func (e *ContactDao) CreateContact(contact *model.Contact) (bool, error) {
 	id := contact.ID
 
 	contact.LastUpdated = time.Now().Unix()
-	res, err := e.client.Index().Index(index).Type(typ).Id(id).BodyJson(contact).Do()
+	result, err := e.client.Index().Index(index).Type(typ).Id(id).BodyJson(contact).Do()
+	if (err != nil) || (result == nil) {
+		return false, err
+	}
 
-	return res.Created, err
+	return result.Created, nil
 }
 
 // GetContact : Get single contact by id
@@ -72,7 +75,7 @@ func (e *ContactDao) SearchContact(number, country string, size int) ([]*model.C
 	query := formHeuristicESQuery(number)
 
 	result, err := e.client.Search().Index(index).Type(typ).Query(query).Size(size).Sort("_score", false).Do()
-	if err != nil {
+	if (err != nil) || (result == nil) || (result.Hits == nil) {
 		return nil, err
 	}
 
@@ -120,8 +123,11 @@ func (e *ContactDao) DeleteContact(id, country string) (bool, error) {
 	typ := typeNum
 
 	result, err := e.client.Delete().Index(index).Type(typ).Id(id).Do()
+	if (err != nil) || (result == nil) {
+		return false, err
+	}
 
-	return result.Found, err
+	return result.Found, nil
 }
 
 // BulkCreateContact : bulk create contacts
