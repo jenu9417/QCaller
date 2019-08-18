@@ -36,6 +36,18 @@ func TestGetContact(t *testing.T) {
 	fmt.Println(contact)
 }
 
+func TestSearchContact(t *testing.T) {
+	contact := getDefaultContact()
+	dao := des.NewContactDao(getESClient(t))
+
+	res, err := dao.SearchContact(contact.Number, contact.Country, 1)
+	if res == nil || err != nil {
+		t.Errorf("Failed to search contact. Err : %v", err)
+	}
+
+	fmt.Println(contact)
+}
+
 func TestUpdateContact_ByName(t *testing.T) {
 	contact := getDefaultContact()
 	dao := des.NewContactDao(getESClient(t))
@@ -65,6 +77,27 @@ func TestDeleteContact(t *testing.T) {
 	res, err := dao.DeleteContact(contact.ID, contact.Country)
 	if !res || err != nil {
 		t.Errorf("Failed to delete contact. Err : %v", err)
+	}
+}
+
+func TestBulkCreateContact(t *testing.T) {
+	contact := getDefaultContact()
+	dao := des.NewContactDao(getESClient(t))
+
+	res, err := dao.BulkCreateContact([]model.Contact{*contact})
+	if !res.Success || err != nil {
+		t.Errorf("Failed to do bulk create contact. Err : %v", err)
+	}
+}
+
+func TestBulkUpdateContact(t *testing.T) {
+	contact := getDefaultContact()
+	dao := des.NewContactDao(getESClient(t))
+	contact.Number = "+919090909090"
+
+	res, err := dao.BulkUpdateContact([]model.Contact{*contact})
+	if !res.Success || err != nil {
+		t.Errorf("Failed to do bulk update contact. Err : %v", err)
 	}
 }
 
