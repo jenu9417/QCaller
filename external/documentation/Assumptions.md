@@ -35,14 +35,16 @@ LastUpdated   -   Long      // UTC timestamp of last modification
 - Making it random, requires it to store at the client end, which will be a bad idea.
 - Since sourceid + number is unique, we can store only one name per contact. Logical this makes sense too. This is the same conflict that will occur in Phone Caller ID when there are multiple contacts with same number. Hence this is a necessary evil to deal with.
 
-**`Country & CountryCode`** - This is for the long term. Ideally it shouldn't be limited to a particular country. Also, country based indexing in es, helps to perform efficient search.
-Why both? - There are countries with same country code. Eg: USA and Canada.
+**`Country & CountryCode`** - This is for the long term. 
+- Ideally it shouldn't be limited to a particular country. 
+- Also, country based indexing in es, helps to perform efficient search.
+- Why both? - There are countries with same country code. Eg: USA and Canada.
 
 **`Number`** - Single Number per record. This is done for multiple reasons.
 - Incase of update operation on name, since we dont store id at client end, it would be a night mare to keep track of changes.
 - Efficient searching. Single number per records helps es to index and search it better.
 - Keeping it simple.
-Hashing of numbers is not done, to keep it simple.
+- Hashing of numbers is not done, to keep it simple.
 
 **`LastUpdated`** - This is helpful for 2 reasons.
 - We can get incremental list of updates happened in a timerange, which will ease syncing to aerospike.
